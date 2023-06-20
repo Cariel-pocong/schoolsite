@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My School Website</title>
+  <style>
+    /* CSS styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav {
+      background-color: #f4f4f4;
+      padding: 10px;
+    }
+
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .navbar-brand {
+      font-size: 1.2rem;
+      color: #333;
+      text-decoration: none;
+    }
+
+    .navbar-toggler {
+      background-color: #333;
+      color: #fff;
+      border: none;
+      padding: 5px;
+      cursor: pointer;
+      display: none;
+    }
+
+    .navbar-menu {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+
+    .navbar-menu li {
+      margin-right: 10px;
+      position: relative;
+    }
+
+    .navbar-menu li a {
+      color: #333;
+      text-decoration: none;
+    }
+
+    .navbar-menu .dropdown-menu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #f4f4f4;
+      padding: 10px;
+    }
+
+    .navbar-menu .dropdown-menu li {
+      margin: 5px 0;
+    }
+
+    .navbar-menu .dropdown:hover .dropdown-menu {
+      display: block;
+    }
+
+    main {
+      margin: 20px;
+    }
+
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+    }
+
+    /* Media queries for responsive design */
+    @media screen and (max-width: 768px) {
+      .navbar-menu {
+        display: none;
+      }
+
+      .navbar-toggler {
+        display: block;
+      }
+
+      .navbar-menu.open {
+        display: flex;
+        flex-direction: column;
+        background-color: #f4f4f4;
+        padding: 10px;
+      }
+
+      .navbar-menu.open li {
+        margin: 10px 0;
+      }
+
+      .navbar-menu .dropdown-menu {
+        position: static;
+        display: block;
+        background-color: transparent;
+        padding: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Welcome to My School</h1>
+  </header>
+  
+  <nav>
+    <div class="navbar">
+      <a href="#" class="navbar-brand">My School</a>
+      <button class="navbar-toggler" onclick="toggleNavbar()">☰</button>
+      <ul class="navbar-menu" id="navbarMenu">
+        <li><a href="#" onclick="showSection('home')">Home</a></li>
+        <li class="dropdown">
+          <a href="#" onclick="toggleDropdown(event)">About &#9662;</a>
+          <ul class="dropdown-menu">
+            <li><a href="#" onclick="showSection('history')">History</a></li>
+            <li><a href="#" onclick="showSection('vision')">Vision</a></li>
+            <li><a href="#" onclick="showSection('mission')">Mission</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#" onclick="toggleDropdown(event)">Courses &#9662;</a>
+          <ul class="dropdown-menu">
+            <li><a href="#" onclick="showSection('math')">Mathematics</a></li>
+            <li><a href="#" onclick="showSection('science')">Science</a></li>
+            <li><a href="#" onclick="showSection('english')">English</a></li>
+            <li><a href="#" onclick="showSection('history')">History</a></li>
+          </ul>
+        </li>
+        <li><a href="#" onclick="showSection('contact')">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+  
+  <main>
+    <section id="home">
+      <h2>Home</h2>
+      <p>Welcome to our school website. Stay updated with the latest news and events.</p>
+    </section>
+    
+    <section id="about" style="display: none;">
+      <h2>About Us</h2>
+      <p>Select an option from the dropdown menu to learn more about us.</p>
+    </section>
+    
+    <section id="history" style="display: none;">
+      <h2>History</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget semper urna. Integer ac bibendum justo, vel pellentesque mauris.</p>
+    </section>
+    
+    <section id="vision" style="display: none;">
+      <h2>Vision</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget semper urna. Integer ac bibendum justo, vel pellentesque mauris.</p>
+    </section>
+    
+    <section id="mission" style="display: none;">
+      <h2>Mission</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget semper urna. Integer ac bibendum justo, vel pellentesque mauris.</p>
+    </section>
+    
+    <section id="courses" style="display: none;">
+      <h2>Our Courses</h2>
+      <p>Select a course from the dropdown menu to learn more about it.</p>
+    </section>
+    
+    <section id="math" style="display: none;">
+      <h2>Mathematics</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget semper urna. Integer ac bibendum justo, vel pellentesque mauris.</p>
+    </section>
+    
+    <section id="science" style="display: none;">
+      <h2>Science</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget semper urna. Integer ac bibendum justo, vel pellentesque mauris.</p>
+    </section>
+    
+    <section id="english" style="display: none;">
+      <h2>English</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget semper urna. Integer ac bibendum justo, vel pellentesque mauris.</p>
+    </section>
+    
+    <section id="contact" style="display: none;">
+      <h2>Contact Us</h2>
+      <form onsubmit="submitForm(event)">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
+        
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+  </main>
+  
+  <footer>
+    <p>&copy; 2023 My School. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // JavaScript code
+    function toggleNavbar() {
+      const navbarMenu = document.getElementById('navbarMenu');
+      navbarMenu.classList.toggle('open');
+    }
+
+    function toggleDropdown(event) {
+      event.preventDefault();
+      const parentListItem = event.target.parentNode;
+      parentListItem.classList.toggle('open');
+    }
+
+    function showSection(sectionId) {
+      // Hide all sections
+      const sections = document.querySelectorAll('section');
+      sections.forEach(section => {
+        section.style.display = 'none';
+      });
+
+      // Show the selected section
+      const selectedSection = document.getElementById(sectionId);
+      selectedSection.style.display = 'block';
+
+      // Close the navbar menu on section selection (for responsive design)
+      const navbarMenu = document.getElementById('navbarMenu');
+      navbarMenu.classList.remove('open');
+    }
+
+    function submitForm(event) {
+      event.preventDefault(); // Prevent form submission
+
+      // Retrieve form data
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const message = document.getElementById('message').value;
+
+      // Perform form submission logic (e.g., send data to a server)
+
+      // Display a success message
+      alert('Form submitted successfully!');
+      
+      // Reset the form
+      document.getElementById('name').value = '';
+      document.getElementById('email').value = '';
+      document.getElementById('message').value = '';
+    }
+  </script>
+</body>
+</html>
