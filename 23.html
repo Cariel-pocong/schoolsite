@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>School Website</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Custom CSS styles */
+
+    /* Navigation Bar */
+    .navbar {
+      background-color: #333;
+    }
+
+    .navbar-brand,
+    .navbar-nav .nav-link {
+      color: #fff;
+    }
+
+    /* Home Section */
+    #home {
+      background-image: url('background.jpg');
+      background-size: cover;
+      background-position: center;
+      min-height: 500px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: black;
+    }
+
+    #home h1 {
+      font-size: 48px;
+      margin-bottom: 20px;
+    }
+
+    #home p {
+      font-size: 20px;
+      margin-bottom: 30px;
+    }
+
+    /* About Section */
+    #about {
+      padding: 80px 0;
+    }
+
+    #about h2 {
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+
+    #about p {
+      font-size: 18px;
+    }
+
+    /* Courses Section */
+    #courses {
+      background-color: #f7f7f7;
+      padding: 80px 0;
+    }
+
+    #courses h2 {
+      font-size: 32px;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .card {
+      margin-bottom: 30px;
+    }
+
+    .card-img-top {
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .card-title {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .card-text {
+      font-size: 16px;
+    }
+
+    /* Contact Section */
+    #contact {
+      padding: 80px 0;
+    }
+
+    #contact h2 {
+      font-size: 32px;
+      margin-bottom: 30px;
+    }
+
+    .form-control {
+      margin-bottom: 20px;
+    }
+
+    .btn-primary {
+      background-color: #333;
+      border-color: #333;
+    }
+
+    /* Footer Section */
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 20px 0;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <a class="navbar-brand" href="#">School Name</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#home">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#courses">Courses</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#contact">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Home Section -->
+  <section id="home" class="container-fluid">
+    <div class="row">
+      <div class="col-lg-12">
+        <h1>Welcome to Our School</h1>
+        <p>Providing quality education since 2000</p>
+        <a href="#about" class="btn btn-primary">Learn More</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <h2>About Us</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris at ipsum eu risus tincidunt lobortis. Nullam quis vulputate magna. Suspendisse potenti. Vestibulum sagittis, libero at faucibus dapibus, sem urna commodo urna, vitae ultrices tortor enim eu enim.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Courses Section -->
+  <section id="courses" class="container-fluid">
+    <div class="row">
+      <div class="col-lg-12">
+        <h2>Our Courses</h2>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card">
+              <img class="card-img-top" src="course1.jpg" alt="Course 1">
+              <div class="card-body">
+                <h5 class="card-title">Course 1</h5>
+                <p class="card-text">Description of Course 1.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <img class="card-img-top" src="course2.jpg" alt="Course 2">
+              <div class="card-body">
+                <h5 class="card-title">Course 2</h5>
+                <p class="card-text">Description of Course 2.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <img class="card-img-top" src="course3.jpg" alt="Course 3">
+              <div class="card-body">
+                <h5 class="card-title">Course 3</h5>
+                <p class="card-text">Description of Course 3.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <h2>Contact Us</h2>
+        <form>
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" id="name" placeholder="Enter your name">
+          </div>
+          <div class="form-group">
+            <label for="email">Email address</label>
+            <input type="email" class="form-control" id="email" placeholder="Enter your email">
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea class="form-control" id="message" rows="3" placeholder="Enter your message"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer class="container-fluid">
+    <div class="row">
+      <div class="col-lg-12">
+        <p>&copy; 2023 School Name. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script>
+    // Smooth scrolling
+    $(document).ready(function () {
+      $('a[href^="#"]').on('click', function (e) {
+        e.preventDefault();
+
+        var target = this.hash;
+        var $target = $(target);
+
+        $('html, body').stop().animate({
+          'scrollTop': $target.offset().top
+        }, 900, 'swing', function () {
+          window.location.hash = target;
+        });
+      });
+    });
+
+    // Toggle navbar collapse on hamburger menu click
+    $(document).ready(function () {
+      $('.navbar-toggler').on('click', function () {
+        $('.navbar-collapse').toggleClass('show');
+      });
+    });
+  </script>
+</body>
+</html>
