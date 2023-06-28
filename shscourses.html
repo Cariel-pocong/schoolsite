@@ -42,9 +42,45 @@
     .feature-section p {
       font-size: 20px;
     }
+      .dropbtn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  
+    
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
   </style>
 </head>
-<body>
+<body style="background-color:white;">
        <header>
       <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
         <div class="container-fluid">
@@ -86,22 +122,58 @@
         </div>
       </nav>
     </header>
-    
-  <main><!-- Hero Section -->
-  <section class="hero-section">
-    <div class="container">
-      <h1>Welcome to Badian National High School</h1>
-      <p>Empowering students for a brighter future</p>
-      <a href="allaboutbnhs.html" class="btn btn-primary">Learn More</a>
-    </div>
-  </section>
 
-  <!-- Feature Section -->
+
+
+
+
+   <main>
+       <p> ICT STRAND<br>
+Explore the Information and Communications Technology Curriculum. The ICT strand curriculum is built to equip students with both the technical expertise expected of professionals in their field by way of their classes in technologies, programming, and media information literacy. There are two types under ICT:<br></p>
+<ul>
+    <li>
+        <figure>
+        <img src="images/logos/css.png"></figure>
+        <p>CSS STRAND<br>
+ Computer System Servicing (CSS) is a vocational program that teaches students how to install, configure and maintain computer systems and networks.<br></p></li>
+    <li><figure>
+        <img src="images/logos/programming.jpg"></figure>
+        <p>PROGRAMMING STRAND<br>
+        Programming in ICT (Information and Communication Technology) refers to the process of writing instructions or code to create software applications, websites, and other digital solutions. It involves using programming languages and tools to develop algorithms and logical instructions that can be executed by a computer or other digital devices.</p><br></li>
+</ul>
+<figure>
+        <img src="images/logos/smaw.jpg"></figure>
+<p>SMAW STRAND<br>
+Shielded Metal Arc Welding is one of the specialized subjects under the technical-vocational livelihood (TVL) career track. Some examples of the things that you will learn from taking this subject include: Essentials of welding. International welding codes and standards.<br></p>
+<figure>
+        <img src="images/logos/eim.jpg"></figure>
+<p>EIM STRAND<br>
+electrical installation and maintenance is the process of installing and maintaining electrical systems and equipment. It may include tasks such as installing wiring, repairing or replacing damaged equipment, and inspecting electrical systems for safety.<br></p>
+<figure>
+        <img src="images/logos/care.png"></figure>
+<p>CAREGIVER STRAND<br>
+This strand aims to give you career-ready skills that can help you find the right job. CAREGIVING. Caregiving is a technical-vocational program that prepares students to provide treatment and assistance to infants/toddlers, the elderly, patients with disabilities, and special needs, as well as end-of-life treatment.<br></p>
+<figure>
+        <img src="images/logos/artsanddesign.jpg"></figure>
+<p>ARTS and DESIGN track<br>
+The arts and design track is where you can harness your innovative thinking. This track allows you to discover your interests in fields such as media and visual arts, performing arts, and literary arts.<br></p>
   
+ <figure>
+        <img src="images/logos/abm.webp"></figure>
+<p>ABM STRAND<br>
+The Accountancy, Business, and Management Strand—or ABM strand—seeks to prepare the young business leaders of tomorrow. ABM strand paves the way for business-related college degrees. It teaches the basic concepts of financial management, accounting, and corporate operations.<br></p>
+<figure>
+        <img src="images/logos/humss.jpg"></figure>
+<p>HUMSS STRAND<br>
+The Humanities and Social Sciences (HUMSS) strands equip students with a wide range of discipline with the use of their experiences and skills into the investigation and inquiry of human situations by studying its behavior and social changes using empirical, analytical, and critical method techniques.<br></p>
+<figure>
+        <img src="images/logos/stem.avif"></figure>
+<p>STEM STRAND<br>
+ STEM stands for Science, Technology, Engineering, and Mathematics strand. Through the STEM strand, senior high school students are exposed to complex mathematical and science theories and concepts which will serve as a foundation for their college courses.<br></p>
 
-  <!-- Other sections and content goes here -->
- </main>
-    <script>
+    </main>
+
+     <script>
       function toggleNavbar() {
         const button = document.querySelector('.navbar-toggler');
         const icon = button.querySelector('.navbar-toggler-icon');
@@ -119,7 +191,5 @@
         }
       }
     </script>
-    
-  
-</body>
+    </body>
 </html>
